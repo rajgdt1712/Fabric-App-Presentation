@@ -24,10 +24,10 @@ App Fabric.AppBackend (Static React + Vega-Lite Frontend)
 .
 ├── docs/
 │   └── images/
-│       ├── app-fabric-executive-financials.jpg  # App Fabric - Executive Financials
-│       ├── app-fabric-accounts-receivable.jpg   # App Fabric - Accounts Receivable
-│       ├── app-fabric-accounts-payable.jpg      # App Fabric - Accounts Payable
-│       └── try-app-preview.png                  # Try app - Entra ID sign-in UI
+│       ├── dashboard-executive-financials.jpg  # App Fabric - Executive Financials
+│       ├── dashboard-accounts-receivable.jpg   # App Fabric - Accounts Receivable
+│       ├── dashboard-accounts-payable.jpg      # App Fabric - Accounts Payable
+│       └── try-app-preview.png                 # Try app - Entra ID sign-in UI
 ├── Fabric_Apps_Full/
 │   ├── App Fabric.AppBackend/             # Primary App Fabric backend & frontend
 │   │   ├── _item_metadata.json
@@ -61,19 +61,19 @@ The `App Fabric` frontend is a Vite/React + Vega-Lite dashboard connected via Di
 * KPIs: Total Revenue (`$14.90M`), Total Expense (`$9.93M`), Net Profit (`$4.97M`), Profit Margin (`33.4%`)
 * Charts: Monthly Financial Trajectory & Departmental Allocation (with company entity filter)
 
-![App Fabric - Executive Financials](docs/images/app-fabric-executive-financials.jpg)
+![App Fabric - Executive Financials](docs/images/dashboard-executive-financials.jpg)
 
 #### Accounts Receivable
 * KPIs: Total Invoiced (`$6.38M`), AR Collected (`$4.36M`), AR Outstanding (`$2.05M`), Active Invoices (`24`)
 * Charts & Ledger: Aging Receivables Exposure & Receivables Ledger & Invoices
 
-![App Fabric - Accounts Receivable](docs/images/app-fabric-accounts-receivable.jpg)
+![App Fabric - Accounts Receivable](docs/images/dashboard-accounts-receivable.jpg)
 
 #### Accounts Payable
 * KPIs: Total Incurred Bills (`$3.62M`), Disbursed (`$2.60M`), AP Outstanding (`$1.04M`), Active Bills (`19`)
 * Charts & Ledger: Payables Aging Exposure & Vendor Payables & Disbursement Ledger
 
-![App Fabric - Accounts Payable](docs/images/app-fabric-accounts-payable.jpg)
+![App Fabric - Accounts Payable](docs/images/dashboard-accounts-payable.jpg)
 
 ### 2. `Try app` (`Try app.AppBackend`)
 The sibling `Try app` bundle (*Ghanshyam Datatech — Financial Analytics*) renders a standalone Microsoft Entra ID sign-in flow backed by `dbo.SecurityUserCompany` in the Semantic Model:
