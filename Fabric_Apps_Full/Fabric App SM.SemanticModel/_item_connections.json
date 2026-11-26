@@ -1,0 +1,11 @@
+{
+  "value": [
+    {
+      "connectivityType": "Automatic",
+      "connectionDetails": {
+        "path": "https://onelake.dfs.fabric.microsoft.com/42aeae0f-446d-4ed0-881d-e27299f64ccb/3930c164-7013-4072-9a6d-d02d28460e88/",
+        "type": "AzureDataLakeStorage"
+      }
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+table SecurityUserCompany
+	lineageTag: 57178cc0-676f-4b44-8596-ab1dc6966ab9
+	sourceLineageTag: [dbo].[SecurityUserCompany]
+
+	column UserEmail
+		dataType: string
+		lineageTag: 22b7b1ed-fa86-4d33-abc9-955c9799906a
+		sourceLineageTag: UserEmail
+		summarizeBy: none
+		sourceColumn: UserEmail
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c4d05ef-5116-4cd5-83dc-ed90f4c7a4de
+		sourceLineageTag: CompanyKey
+		summarizeBy: count
+		sourceColumn: CompanyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccessLevel
+		dataType: string
+		lineageTag: 806dd81b-9698-4f3d-a5e8-8b805e2533f2
+		sourceLineageTag: AccessLevel
+		summarizeBy: none
+		sourceColumn: AccessLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 3027982a-7e6e-40ac-a568-84aa466d4f3a
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition SecurityUserCompany = entity
+		mode: directLake
+		source
+			entityName: SecurityUserCompany
+			schemaName: dbo
+			expressionSource: 'DirectLake - Gold_FabricApp'
+

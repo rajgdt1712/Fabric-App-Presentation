@@ -1,0 +1,135 @@
+table DimCostCenter
+	lineageTag: 03ad71f4-1282-44ff-be74-aa71d9ca71ce
+	sourceLineageTag: [dbo].[DimCostCenter]
+
+	column CostCenterKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 969c1882-ef1d-4725-a087-94be63c0a255
+		sourceLineageTag: CostCenterKey
+		summarizeBy: none
+		sourceColumn: CostCenterKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostCenterCode
+		dataType: string
+		lineageTag: 19493f97-6a96-4939-ab97-9ead3aba9144
+		sourceLineageTag: CostCenterCode
+		summarizeBy: none
+		sourceColumn: CostCenterCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostCenterName
+		dataType: string
+		lineageTag: ee241836-a724-4d82-aeac-5cb05f564a7f
+		sourceLineageTag: CostCenterName
+		summarizeBy: none
+		sourceColumn: CostCenterName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CostCenterGroup
+		dataType: string
+		lineageTag: 3b260139-dc85-4470-85e1-1c5568cfa1cb
+		sourceLineageTag: CostCenterGroup
+		summarizeBy: none
+		sourceColumn: CostCenterGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column ManagerName
+		dataType: string
+		lineageTag: 18b3cf1f-183d-4bd6-baea-08b1c5092160
+		sourceLineageTag: ManagerName
+		summarizeBy: none
+		sourceColumn: ManagerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationCode
+		dataType: string
+		lineageTag: 4c188db9-e5b8-4867-947c-23fee6785a37
+		sourceLineageTag: LocationCode
+		summarizeBy: none
+		sourceColumn: LocationCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column LocationName
+		dataType: string
+		lineageTag: ff40b35d-6536-4445-bc55-0595cc386d92
+		sourceLineageTag: LocationName
+		summarizeBy: none
+		sourceColumn: LocationName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 13b5e6df-5aa5-415b-9be7-a55ee33f5cb1
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveFrom
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b74a5e00-7fdc-45ce-acf1-3b91e87490ee
+		sourceLineageTag: EffectiveFrom
+		summarizeBy: none
+		sourceColumn: EffectiveFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveTo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a2ce669f-02c0-4761-8226-45bda39f000d
+		sourceLineageTag: EffectiveTo
+		summarizeBy: none
+		sourceColumn: EffectiveTo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCurrent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 1046400b-aaea-4293-bb0f-e494c89b1bb6
+		sourceLineageTag: IsCurrent
+		summarizeBy: none
+		sourceColumn: IsCurrent
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 88237bf6-6aeb-4885-81d4-1f0d492227d1
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4a7a349d-9af6-4256-9ce3-45ff0353dc08
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCostCenter = entity
+		mode: directLake
+		source
+			entityName: DimCostCenter
+			schemaName: dbo
+			expressionSource: 'DirectLake - Gold_FabricApp'
+

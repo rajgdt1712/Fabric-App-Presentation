@@ -1,0 +1,141 @@
+table Measure
+	lineageTag: ae74cc05-68b0-41a5-95ef-d892eb50ba31
+
+	measure 'AR Outstanding' =
+			
+			CALCULATE(
+			    SUM(FactAccountsReceivable[OutstandingAmount]),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsReceivable[CompanyKey]
+			    )
+			)
+		lineageTag: 15887162-3b7c-4900-bbd8-8144eafd284c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AR Invoiced' =
+			
+			CALCULATE(
+			    SUM(FactAccountsReceivable[InvoiceAmount]),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsReceivable[CompanyKey]
+			    )
+			)
+		lineageTag: 1640755e-e09d-4373-9ac0-f332931ac25c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AR Paid' =
+			
+			CALCULATE(
+			    SUM(FactAccountsReceivable[PaidAmount]),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsReceivable[CompanyKey]
+			    )
+			)
+		lineageTag: a1f99da0-7176-4adc-91f1-ce57cdc06fe7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AR Invoice Count' =
+			
+			CALCULATE(
+			    COUNTROWS(FactAccountsReceivable),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsReceivable[CompanyKey]
+			    )
+			)
+		formatString: 0
+		lineageTag: 1d7bc829-03d7-4e5c-8d9c-195844e417c9
+
+	measure 'AP Outstanding' =
+			
+			CALCULATE(
+			    SUM(FactAccountsPayable[OutstandingAmount]),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsPayable[CompanyKey]
+			    )
+			)
+		lineageTag: 9dbe75cd-c5fb-4d51-bd64-301139aca221
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AP Bills' =
+			
+			CALCULATE(
+			    SUM(FactAccountsPayable[InvoiceAmount]),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsPayable[CompanyKey]
+			    )
+			)
+		lineageTag: 1f7a7c59-84cc-4693-83be-7fa490fa99bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AP Paid' =
+			
+			CALCULATE(
+			    SUM(FactAccountsPayable[PaidAmount]),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsPayable[CompanyKey]
+			    )
+			)
+		lineageTag: fb09fe6a-e04d-47c8-abc2-fece2094dd5a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'AP Bill Count' =
+			
+			CALCULATE(
+			    COUNTROWS(FactAccountsPayable),
+			    TREATAS(
+			        VALUES(DimCompany[CompanyKey]),
+			        FactAccountsPayable[CompanyKey]
+			    )
+			)
+		formatString: 0
+		lineageTag: 596ecb0e-fa80-4428-8139-8eab48d4f5cf
+
+	measure 'Total Debit' =
+			
+			SUM(FactGeneralLedger[DebitAmount])
+		lineageTag: c1705ad8-f85e-452e-b58e-cefe490df834
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Credit' =
+			
+			SUM(FactGeneralLedger[CreditAmount])
+		lineageTag: fa98d376-25cb-401e-b5c8-86703f24779a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Amount' =
+			
+			[Total Debit] - [Total Credit]
+		lineageTag: abc1429d-ccd4-4067-b235-2f75ebbccda9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: a5307728-d5d4-4397-89eb-f0964a2df20b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measure = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 774aba54f49c476c8a7eb924f9d26e07
+

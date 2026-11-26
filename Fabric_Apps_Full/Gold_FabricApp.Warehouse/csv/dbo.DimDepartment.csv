@@ -1,0 +1,7 @@
+﻿"DepartmentKey","DepartmentCode","DepartmentName","DepartmentGroup","ManagerName","IsActive","EffectiveFrom","EffectiveTo","IsCurrent","CreatedDate","ModifiedDate"
+"5161125172966588417","D001","Finance","Corporate","Michael Brown","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:56 AM","9/3/2026 6:12:56 AM"
+"5161125172966588418","D002","Sales","Commercial","Sarah Johnson","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:56 AM","9/3/2026 6:12:56 AM"
+"5161125172966588419","D003","Operations","Operations","David Wilson","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:56 AM","9/3/2026 6:12:56 AM"
+"5161125172966588420","D004","Human Resources","Corporate","Jessica Taylor","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:56 AM","9/3/2026 6:12:56 AM"
+"5161125172966588421","D005","Information Technology","Corporate","Emily Davis","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:56 AM","9/3/2026 6:12:56 AM"
+"5161125172966588422","D006","Marketing","Commercial","Robert Anderson","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:56 AM","9/3/2026 6:12:56 AM"

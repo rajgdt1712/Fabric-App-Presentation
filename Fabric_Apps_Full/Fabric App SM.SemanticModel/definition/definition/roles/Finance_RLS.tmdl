@@ -1,0 +1,44 @@
+role Finance_RLS
+	modelPermission: read
+
+	tablePermission DimCompany =
+			DimCompany[CompanyKey]
+			    IN
+			    SELECTCOLUMNS(
+			        FILTER(
+			            SecurityUserCompany,
+			            SecurityUserCompany[UserEmail] = USERPRINCIPALNAME()
+			                && SecurityUserCompany[IsActive] = TRUE()
+			        ),
+			        "CompanyKey",
+			        SecurityUserCompany[CompanyKey]
+			    )
+
+	tablePermission FactAccountsReceivable =
+			FactAccountsReceivable[CompanyKey]
+			    IN
+			    SELECTCOLUMNS(
+			        FILTER(
+			            SecurityUserCompany,
+			            SecurityUserCompany[UserEmail] = USERPRINCIPALNAME()
+			                && SecurityUserCompany[IsActive] = TRUE()
+			        ),
+			        "CompanyKey",
+			        SecurityUserCompany[CompanyKey]
+			    )
+
+	tablePermission FactAccountsPayable =
+			FactAccountsPayable[CompanyKey]
+			    IN
+			    SELECTCOLUMNS(
+			        FILTER(
+			            SecurityUserCompany,
+			            SecurityUserCompany[UserEmail] = USERPRINCIPALNAME()
+			                && SecurityUserCompany[IsActive] = TRUE()
+			        ),
+			        "CompanyKey",
+			        SecurityUserCompany[CompanyKey]
+			    )
+
+	annotation PBI_Id = 0fb33d414c304384b691d90a92064e96
+

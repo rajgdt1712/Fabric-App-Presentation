@@ -1,0 +1,183 @@
+table DimAccount
+	lineageTag: 6ff1517d-3eec-493f-9d9b-679ae833afc3
+	sourceLineageTag: [dbo].[DimAccount]
+
+	column AccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d9f61936-2c1b-478b-9f0d-2922b6192f24
+		sourceLineageTag: AccountKey
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountCode
+		dataType: string
+		lineageTag: bfed023d-936d-4427-b3d0-38a740d8ab23
+		sourceLineageTag: AccountCode
+		summarizeBy: none
+		sourceColumn: AccountCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountName
+		dataType: string
+		lineageTag: aca3ee94-6991-4e36-841b-e63e2435915d
+		sourceLineageTag: AccountName
+		summarizeBy: none
+		sourceColumn: AccountName
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountType
+		dataType: string
+		lineageTag: f8f21c5b-6c0f-4673-ada0-9ea4ffe7a8b7
+		sourceLineageTag: AccountType
+		summarizeBy: none
+		sourceColumn: AccountType
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountCategory
+		dataType: string
+		lineageTag: 22d56028-fae3-4032-bd64-c868be24e5e3
+		sourceLineageTag: AccountCategory
+		summarizeBy: none
+		sourceColumn: AccountCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ParentAccountCode
+		dataType: string
+		lineageTag: 1e1d4627-3c32-4ade-b411-50511d8f545a
+		sourceLineageTag: ParentAccountCode
+		summarizeBy: none
+		sourceColumn: ParentAccountCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ee8861a-8eb7-428f-805f-e7548f391bf8
+		sourceLineageTag: AccountLevel
+		summarizeBy: sum
+		sourceColumn: AccountLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column BalanceType
+		dataType: string
+		lineageTag: e70ea0b2-1aa1-4410-af3b-f132a11adb77
+		sourceLineageTag: BalanceType
+		summarizeBy: none
+		sourceColumn: BalanceType
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinancialStatement
+		dataType: string
+		lineageTag: 8c16cf8a-354b-4c5a-a477-3ef9fb641777
+		sourceLineageTag: FinancialStatement
+		summarizeBy: none
+		sourceColumn: FinancialStatement
+
+		annotation SummarizationSetBy = Automatic
+
+	column FinancialSection
+		dataType: string
+		lineageTag: 097cc64e-b842-44cf-b6c2-ef621ab2c82a
+		sourceLineageTag: FinancialSection
+		summarizeBy: none
+		sourceColumn: FinancialSection
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsControlAccount
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a48547a9-cf70-4cb6-954f-2d44b916979a
+		sourceLineageTag: IsControlAccount
+		summarizeBy: none
+		sourceColumn: IsControlAccount
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsPostingAccount
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0ce7688c-3c50-4c5d-a705-5663fb262667
+		sourceLineageTag: IsPostingAccount
+		summarizeBy: none
+		sourceColumn: IsPostingAccount
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: f90ee05c-b47b-45c0-b64a-86a5e0467adb
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveFrom
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7a01a15e-7693-4351-9158-83e8db32f9a9
+		sourceLineageTag: EffectiveFrom
+		summarizeBy: none
+		sourceColumn: EffectiveFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveTo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ca364d99-32ae-4e4e-94f2-c97a4cbee479
+		sourceLineageTag: EffectiveTo
+		summarizeBy: none
+		sourceColumn: EffectiveTo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCurrent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 32f2e2e2-d192-4468-bbb3-b7b90e2c5333
+		sourceLineageTag: IsCurrent
+		summarizeBy: none
+		sourceColumn: IsCurrent
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 537634c0-54e8-409f-ba5c-97d25b1e005d
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9397233e-3470-434d-987f-cae0c5481246
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimAccount = entity
+		mode: directLake
+		source
+			entityName: DimAccount
+			schemaName: dbo
+			expressionSource: 'DirectLake - Gold_FabricApp'
+

@@ -1,0 +1,117 @@
+table DimDepartment
+	lineageTag: 7b0493d4-6a1c-4910-9adf-1c5653fb3ad6
+	sourceLineageTag: [dbo].[DimDepartment]
+
+	column DepartmentKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 500b90b3-5a89-40bc-a299-1c1151fd6738
+		sourceLineageTag: DepartmentKey
+		summarizeBy: none
+		sourceColumn: DepartmentKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentCode
+		dataType: string
+		lineageTag: e3fa70aa-1a27-48d0-b551-6a9dd7ac21d1
+		sourceLineageTag: DepartmentCode
+		summarizeBy: none
+		sourceColumn: DepartmentCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: e76957c7-3a4a-4105-ae02-2b12b7c60657
+		sourceLineageTag: DepartmentName
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentGroup
+		dataType: string
+		lineageTag: 826802e1-86c7-4fb6-bb14-93485685cac4
+		sourceLineageTag: DepartmentGroup
+		summarizeBy: none
+		sourceColumn: DepartmentGroup
+
+		annotation SummarizationSetBy = Automatic
+
+	column ManagerName
+		dataType: string
+		lineageTag: 55e76f75-96c3-47a1-a3a3-fc71a0d25f9f
+		sourceLineageTag: ManagerName
+		summarizeBy: none
+		sourceColumn: ManagerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: da7c2450-94b7-4b85-b3a4-3050ad3720b2
+		sourceLineageTag: IsActive
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveFrom
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e8f77345-dbc7-4a7b-aa26-8b9677ad0ffe
+		sourceLineageTag: EffectiveFrom
+		summarizeBy: none
+		sourceColumn: EffectiveFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveTo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: fd98035d-576c-49d8-b2b0-a9a6b81d5035
+		sourceLineageTag: EffectiveTo
+		summarizeBy: none
+		sourceColumn: EffectiveTo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCurrent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 49f5676c-cfa6-4c48-8131-4c2086fd48e4
+		sourceLineageTag: IsCurrent
+		summarizeBy: none
+		sourceColumn: IsCurrent
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5d171460-d7e3-4ecf-b733-299df41e84a5
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b97ecaa3-a8b8-4423-9816-ccc6591a16aa
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimDepartment = entity
+		mode: directLake
+		source
+			entityName: DimDepartment
+			schemaName: dbo
+			expressionSource: 'DirectLake - Gold_FabricApp'
+

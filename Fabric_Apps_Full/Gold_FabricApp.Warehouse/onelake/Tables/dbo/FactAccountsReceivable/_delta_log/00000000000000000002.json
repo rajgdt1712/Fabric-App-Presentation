@@ -1,0 +1,4 @@
+{"txn":{"appId":"424c3456-c3dc-e5f8-530f-135019cd5974","version":1916}}
+{"protocol":{"minReaderVersion":3,"minWriterVersion":7,"readerFeatures":["columnMapping","deletionVectors"],"writerFeatures":["columnMapping","deletionVectors","invariants"]}}
+{"remove":{"path":"4F199467-6BFA-414F-A790-EE84CBB829A0/0/1670/CFBAF5DA-5CCB-417C-921F-8E1B1EA82A5C.parquet","dataChange":true,"extendedFileMetadata":true,"partitionValues":{},"size":10768,"tags":{"cell":"495","vorder":"true"}}}
+{"add":{"path":"4F199467-6BFA-414F-A790-EE84CBB829A0/0/1670/CFBAF5DA-5CCB-417C-921F-8E1B1EA82A5C.parquet","partitionValues":{},"size":10768,"modificationTime":1788416858000,"dataChange":true,"stats":"{\"numRecords\":5}","tags":{"cell":"495","vorder":"true"},"deletionVector":{"storageType":"i","pathOrInlineDv":"^Bg9^0rr910000000000iXQKl0rr91000005c8Xg1onA4","sizeInBytes":34,"cardinality":1}}}

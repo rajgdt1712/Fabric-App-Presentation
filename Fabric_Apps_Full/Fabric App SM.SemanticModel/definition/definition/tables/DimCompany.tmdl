@@ -1,0 +1,180 @@
+table DimCompany
+	lineageTag: 373f4f89-c8db-4609-8f53-a6fe9ae41227
+	sourceLineageTag: [dbo].[DimCompany]
+
+	column CompanyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a290c7d7-f953-4f65-ad8e-af24d6a16559
+		sourceLineageTag: CompanyKey
+		summarizeBy: none
+		sourceColumn: CompanyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyCode
+		dataType: string
+		lineageTag: a8553b59-74e1-4f9e-b14b-c036eb1ad24e
+		sourceLineageTag: CompanyCode
+		summarizeBy: none
+		sourceColumn: CompanyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: 2ea7dde2-6c65-4ebb-9ea6-45e7698e654f
+		sourceLineageTag: CompanyName
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column LegalEntityName
+		dataType: string
+		lineageTag: 12f3f2ef-5fdf-418c-ae52-c4d432b618d4
+		sourceLineageTag: LegalEntityName
+		summarizeBy: none
+		sourceColumn: LegalEntityName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryCode
+		dataType: string
+		lineageTag: 82612ef1-e4a8-401b-bf89-208b6e5092c1
+		sourceLineageTag: CountryCode
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryName
+		dataType: string
+		lineageTag: c908e7fa-1877-4ea9-afaf-9c5015ba835d
+		sourceLineageTag: CountryName
+		summarizeBy: none
+		sourceColumn: CountryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateCode
+		dataType: string
+		lineageTag: ca93a661-8719-4839-806f-fbfee3683c39
+		sourceLineageTag: StateCode
+		summarizeBy: none
+		sourceColumn: StateCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column StateName
+		dataType: string
+		lineageTag: b6f77933-b4d5-49e6-b415-0d1784798e22
+		sourceLineageTag: StateName
+		summarizeBy: none
+		sourceColumn: StateName
+
+		annotation SummarizationSetBy = Automatic
+
+	column BaseCurrencyCode
+		dataType: string
+		lineageTag: e7f4637b-499c-497c-bbd0-b93f9790ccb3
+		sourceLineageTag: BaseCurrencyCode
+		summarizeBy: none
+		sourceColumn: BaseCurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYearStartMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 87625942-4833-4593-a8cb-d6b079cbc895
+		sourceLineageTag: FiscalYearStartMonth
+		summarizeBy: none
+		sourceColumn: FiscalYearStartMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column TaxRegistrationNo
+		dataType: string
+		lineageTag: 9fa4af1f-707d-4609-b121-59b73952b115
+		sourceLineageTag: TaxRegistrationNo
+		summarizeBy: none
+		sourceColumn: TaxRegistrationNo
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyType
+		dataType: string
+		lineageTag: d3393ac9-2495-4e88-abbd-97f93368fcce
+		sourceLineageTag: CompanyType
+		summarizeBy: none
+		sourceColumn: CompanyType
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyStatus
+		dataType: string
+		lineageTag: 5b06f672-f73b-424f-8b9a-ae1861acb777
+		sourceLineageTag: CompanyStatus
+		summarizeBy: none
+		sourceColumn: CompanyStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveFrom
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2bc7ebec-7a4d-4ef1-bb3b-3aa4a20fff35
+		sourceLineageTag: EffectiveFrom
+		summarizeBy: none
+		sourceColumn: EffectiveFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column EffectiveTo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f9749eb5-80ff-4491-929a-0794503cc267
+		sourceLineageTag: EffectiveTo
+		summarizeBy: none
+		sourceColumn: EffectiveTo
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsCurrent
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a64b863a-dcc7-4477-bace-607b68b1e996
+		sourceLineageTag: IsCurrent
+		summarizeBy: none
+		sourceColumn: IsCurrent
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e234ad61-eab2-4582-beae-ef544906291c
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dffa5b4d-7dbb-4316-b943-d1629220c1e9
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCompany = entity
+		mode: directLake
+		source
+			entityName: DimCompany
+			schemaName: dbo
+			expressionSource: 'DirectLake - Gold_FabricApp'
+

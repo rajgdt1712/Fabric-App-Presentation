@@ -1,0 +1,248 @@
+table FactAccountsPayable
+	lineageTag: cb6a25a7-7a2c-4f79-a8df-30f0e29118f3
+	sourceLineageTag: [dbo].[FactAccountsPayable]
+
+	column APTransactionKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b74effb3-29d9-4947-84d7-9ec524eb71c1
+		sourceLineageTag: APTransactionKey
+		summarizeBy: count
+		sourceColumn: APTransactionKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: c9d802ea-2795-42c1-8761-f745a25d96b6
+		sourceLineageTag: DateKey
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 88695797-5b41-4ed6-8df9-bbdfff360325
+		sourceLineageTag: CompanyKey
+		summarizeBy: count
+		sourceColumn: CompanyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column VendorKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b3db9b42-ca0e-4981-8a46-f126717189d0
+		sourceLineageTag: VendorKey
+		summarizeBy: none
+		sourceColumn: VendorKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column AccountKey
+		dataType: int64
+		formatString: 0
+		lineageTag: fa8db366-06c3-4bcb-abdd-09ae9fdcee64
+		sourceLineageTag: AccountKey
+		summarizeBy: none
+		sourceColumn: AccountKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceNumber
+		dataType: string
+		lineageTag: d460bc75-efab-4b75-a7c9-4c8624635d4f
+		sourceLineageTag: InvoiceNumber
+		summarizeBy: none
+		sourceColumn: InvoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentNumber
+		dataType: string
+		lineageTag: 5ec5a752-e10e-4237-a5ae-f905268390bb
+		sourceLineageTag: DocumentNumber
+		summarizeBy: none
+		sourceColumn: DocumentNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column DocumentType
+		dataType: string
+		lineageTag: 21e8ae32-0fdd-4956-b042-c07548125044
+		sourceLineageTag: DocumentType
+		summarizeBy: none
+		sourceColumn: DocumentType
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2a20c65b-214e-4d10-9a40-1a333969e421
+		sourceLineageTag: InvoiceDate
+		summarizeBy: none
+		sourceColumn: InvoiceDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a114c7db-43dd-4598-b384-392deb749419
+		sourceLineageTag: DueDate
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column PaymentDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: a433a931-e4f6-49c9-a1ea-dd468c70d5c0
+		sourceLineageTag: PaymentDate
+		summarizeBy: none
+		sourceColumn: PaymentDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceAmount
+		dataType: double
+		lineageTag: f4712639-a413-48cb-b320-73e2a766906f
+		sourceLineageTag: InvoiceAmount
+		summarizeBy: sum
+		sourceColumn: InvoiceAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TaxAmount
+		dataType: double
+		lineageTag: 4bb2544e-2c9d-4a16-bc73-4e3ecfbf46fa
+		sourceLineageTag: TaxAmount
+		summarizeBy: sum
+		sourceColumn: TaxAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PaidAmount
+		dataType: double
+		lineageTag: 2d189f65-d671-402d-8499-8f13bd280df5
+		sourceLineageTag: PaidAmount
+		summarizeBy: sum
+		sourceColumn: PaidAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OutstandingAmount
+		dataType: double
+		lineageTag: 1e8bba21-a928-4a20-a682-b199afd6a625
+		sourceLineageTag: OutstandingAmount
+		summarizeBy: sum
+		sourceColumn: OutstandingAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: f88569b3-7944-474e-98d2-7f5a29515be6
+		sourceLineageTag: CurrencyCode
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeRate
+		dataType: double
+		lineageTag: f0e41ff4-866a-4328-9c20-6b3981713646
+		sourceLineageTag: ExchangeRate
+		summarizeBy: sum
+		sourceColumn: ExchangeRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AgingDays
+		dataType: int64
+		formatString: 0
+		lineageTag: d58b355b-8764-4e9e-a0f4-0765ff54ca51
+		sourceLineageTag: AgingDays
+		summarizeBy: sum
+		sourceColumn: AgingDays
+
+		annotation SummarizationSetBy = Automatic
+
+	column AgingBucket
+		dataType: string
+		lineageTag: acde81a1-df00-48ce-916f-b307c60b4f4c
+		sourceLineageTag: AgingBucket
+		summarizeBy: none
+		sourceColumn: AgingBucket
+
+		annotation SummarizationSetBy = Automatic
+
+	column Status
+		dataType: string
+		lineageTag: 2916acd7-6e39-4391-9140-c64e4e93dd88
+		sourceLineageTag: Status
+		summarizeBy: none
+		sourceColumn: Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceSystem
+		dataType: string
+		lineageTag: c287a7e6-8db4-4b89-be41-05c02a492280
+		sourceLineageTag: SourceSystem
+		summarizeBy: none
+		sourceColumn: SourceSystem
+
+		annotation SummarizationSetBy = Automatic
+
+	column SourceRecordID
+		dataType: string
+		lineageTag: 7ac743b2-01e8-4a76-8bb8-d89fb68c883d
+		sourceLineageTag: SourceRecordID
+		summarizeBy: none
+		sourceColumn: SourceRecordID
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 4405a906-527e-4abb-b303-9a6b95e29177
+		sourceLineageTag: CreatedDate
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5c02450d-0882-48a2-ad39-d06047236373
+		sourceLineageTag: ModifiedDate
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactAccountsPayable = entity
+		mode: directLake
+		source
+			entityName: FactAccountsPayable
+			schemaName: dbo
+			expressionSource: 'DirectLake - Gold_FabricApp'
+

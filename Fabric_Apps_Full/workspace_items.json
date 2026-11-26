@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ebad6356-c9d9-4421-862a-55b85670d78a",
+    "type": "SemanticModel",
+    "displayName": "Fabric App SM",
+    "description": "",
+    "workspaceId": "42aeae0f-446d-4ed0-881d-e27299f64ccb",
+    "logicalId": null
+  },
+  {
+    "id": "3930c164-7013-4072-9a6d-d02d28460e88",
+    "type": "Warehouse",
+    "displayName": "Gold_FabricApp",
+    "description": "",
+    "workspaceId": "42aeae0f-446d-4ed0-881d-e27299f64ccb",
+    "logicalId": null
+  },
+  {
+    "id": "b23b7c41-20d7-4aaf-a9b8-40e26d979c58",
+    "type": "AppBackend",
+    "displayName": "App Fabric",
+    "description": "",
+    "workspaceId": "42aeae0f-446d-4ed0-881d-e27299f64ccb",
+    "logicalId": null
+  },
+  {
+    "id": "2ce4fa8f-0002-41a4-b2b7-aef3842ee0dc",
+    "type": "AppBackend",
+    "displayName": "fabric-app",
+    "description": "",
+    "workspaceId": "42aeae0f-446d-4ed0-881d-e27299f64ccb",
+    "logicalId": null
+  },
+  {
+    "id": "8d42a24d-1a87-4913-b16d-bde351e7bcde",
+    "type": "AppBackend",
+    "displayName": "Try app",
+    "description": "",
+    "workspaceId": "42aeae0f-446d-4ed0-881d-e27299f64ccb",
+    "logicalId": null
+  }
+]

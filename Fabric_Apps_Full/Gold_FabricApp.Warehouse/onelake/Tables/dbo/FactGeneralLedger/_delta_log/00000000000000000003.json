@@ -1,0 +1,2 @@
+{"txn":{"appId":"424c3456-c3dc-e5f8-530f-135019cd5974","version":2003}}
+{"add":{"path":"CA3EA040-B2B9-4353-ACE2-16C610A0F5C1/0/2003/08946C42-1BE2-4FC7-98CC-D4313E233E8F.parquet","partitionValues":{},"size":23830,"modificationTime":1788430149000,"dataChange":true,"stats":"{\"numRecords\":100}","tags":{"cell":"448","vorder":"true"}}}

@@ -1,0 +1,6 @@
+﻿"CostCenterKey","CostCenterCode","CostCenterName","CostCenterGroup","ManagerName","LocationCode","LocationName","IsActive","EffectiveFrom","EffectiveTo","IsCurrent","CreatedDate","ModifiedDate"
+"396316767208603649","CC100","Corporate","Corporate","John Smith","HQ","New York","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:28 AM","9/3/2026 6:12:28 AM"
+"396316767208603650","CC200","Sales","Commercial","Sarah Johnson","NY01","New York","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:28 AM","9/3/2026 6:12:28 AM"
+"396316767208603651","CC300","Finance","Corporate","Michael Brown","HQ","New York","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:28 AM","9/3/2026 6:12:28 AM"
+"396316767208603652","CC400","Operations","Operations","David Wilson","TX01","Dallas","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:28 AM","9/3/2026 6:12:28 AM"
+"396316767208603653","CC500","IT","Corporate","Emily Davis","HQ","New York","True","1/1/2025 12:00:00 AM","","True","9/3/2026 6:12:28 AM","9/3/2026 6:12:28 AM"
