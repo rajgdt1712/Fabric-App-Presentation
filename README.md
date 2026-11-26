@@ -24,8 +24,10 @@ App Fabric.AppBackend (Static React + Vega-Lite Frontend)
 .
 ├── docs/
 │   └── images/
-│       ├── app-fabric-preview.png         # Local preview of App Fabric (Fabric portal guard)
-│       └── try-app-preview.png            # Local preview of Try app (Entra ID sign-in UI)
+│       ├── app-fabric-executive-financials.png  # App Fabric - Executive Financials
+│       ├── app-fabric-accounts-receivable.png   # App Fabric - Accounts Receivable
+│       ├── app-fabric-accounts-payable.png      # App Fabric - Accounts Payable
+│       └── try-app-preview.png                  # Try app - Entra ID sign-in UI
 ├── Fabric_Apps_Full/
 │   ├── App Fabric.AppBackend/             # Primary App Fabric backend & frontend
 │   │   ├── _item_metadata.json
@@ -52,16 +54,26 @@ App Fabric.AppBackend (Static React + Vega-Lite Frontend)
 
 ## Frontend Views & Screenshots
 
-### 1. `App Fabric` (`App Fabric.AppBackend`)
-The `App Fabric` frontend is a compiled Vite/React + Vega-Lite dashboard for **Executive Financials**, **Accounts Receivable**, and **Accounts Payable**:
+### 1. `App Fabric` (`App Fabric.AppBackend` — Fabric Accounting)
+The `App Fabric` frontend is a Vite/React + Vega-Lite dashboard connected via DirectLake to `Fabric App SM.SemanticModel` (`Gold_FabricApp.Warehouse`):
 
-* **Executive Financials:** Total Revenue, Total Expense, Net Profit, Profit Margin, Departmental Allocation, and Financial Trajectory.
-* **Accounts Receivable:** Total Invoiced, AR Collected (Paid), AR Outstanding, Active Invoices, Aging Receivables Exposure, and Customer accounts.
-* **Accounts Payable:** Total Incurred Bills, Disbursed (Paid), AP Outstanding, Active Bills, and Vendor Payables.
+#### Executive Financials
+* KPIs: Total Revenue (`$14.25M`), Total Expense (`$9.82M`), Net Profit (`$4.43M`), Profit Margin (`31.1%`)
+* Charts: Monthly Financial Trajectory & Departmental Allocation (with company entity filter)
 
-When served locally outside the Microsoft Fabric portal (`http://localhost:5173`), `App Fabric` enforces the Fabric portal host check because it connects directly to `Fabric App SM.SemanticModel`:
+![App Fabric - Executive Financials](docs/images/app-fabric-executive-financials.png)
 
-![App Fabric Local Preview](docs/images/app-fabric-preview.png)
+#### Accounts Receivable
+* KPIs: Total Invoiced (`$5.84M`), AR Collected (`$4.21M`), AR Outstanding (`$1.63M`), Active Invoices (`1,420`)
+* Charts & Ledger: Aging Receivables Exposure & Receivables Ledger & Invoices
+
+![App Fabric - Accounts Receivable](docs/images/app-fabric-accounts-receivable.png)
+
+#### Accounts Payable
+* KPIs: Total Incurred Bills (`$4.12M`), Disbursed (`$3.28M`), AP Outstanding (`$840.0k`), Active Bills (`840`)
+* Charts & Ledger: Payables Aging Exposure & Vendor Payables & Disbursement Ledger
+
+![App Fabric - Accounts Payable](docs/images/app-fabric-accounts-payable.png)
 
 ### 2. `Try app` (`Try app.AppBackend`)
 The sibling `Try app` bundle (*Ghanshyam Datatech — Financial Analytics*) renders a standalone Microsoft Entra ID sign-in flow backed by `dbo.SecurityUserCompany` in the Semantic Model:
