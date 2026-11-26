@@ -99,8 +99,8 @@ The sibling `Try app` bundle (*Ghanshyam Datatech — Financial Analytics*) rend
 
 ### Step 1: Clone the Repository
 ```powershell
-git clone https://github.com/rajgdt1712/fabric-apps-export.git
-cd fabric-apps-export
+git clone https://github.com/rajgdt1712/Fabric-App-Presentation.git
+cd Fabric-App-Presentation
 ```
 
 ### Step 2: Set Up the Database (`Gold_FabricApp.Warehouse`)
