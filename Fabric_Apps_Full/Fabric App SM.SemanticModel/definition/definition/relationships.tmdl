@@ -1,22 +1,22 @@
 relationship 377bfb6e-ebea-7b1e-0077-ea2698dc5f20
-	fromColumn: DimDate.DateKey
-	toColumn: FactAccountsPayable.DateKey
+	fromColumn: FactAccountsPayable.DateKey
+	toColumn: DimDate.DateKey
 
 relationship d5259bff-6939-48b9-5892-9599ab134baa
-	fromColumn: DimDate.DateKey
-	toColumn: FactAccountsReceivable.DateKey
+	fromColumn: FactAccountsReceivable.DateKey
+	toColumn: DimDate.DateKey
 
 relationship 6b1465b8-b3ba-68eb-d4fd-ace89c5da015
-	fromColumn: DimDate.DateKey
-	toColumn: FactGeneralLedger.DateKey
+	fromColumn: FactGeneralLedger.DateKey
+	toColumn: DimDate.DateKey
 
 relationship ca4f0f3a-af3d-75e5-3455-5d269de7817c
 	fromColumn: FactGeneralLedger.CompanyKey
 	toColumn: DimCompany.CompanyKey
 
 relationship 828736e2-0b48-2535-79c2-a3dd570d8150
-	fromColumn: DimAccount.AccountKey
-	toColumn: FactGeneralLedger.AccountKey
+	fromColumn: FactGeneralLedger.AccountKey
+	toColumn: DimAccount.AccountKey
 
 relationship c1c45fe1-4e69-cda5-931e-e36d1a70488f
 	fromColumn: FactGeneralLedger.CostCenterKey
@@ -27,18 +27,18 @@ relationship 0a875c6a-3ccc-ebc7-1833-b7035c1004d8
 	toColumn: DimDepartment.DepartmentKey
 
 relationship a44f92d9-bda8-6106-4ebf-45d858028301
-	fromColumn: DimCustomer.CustomerKey
-	toColumn: FactAccountsReceivable.CustomerKey
+	fromColumn: FactAccountsReceivable.CustomerKey
+	toColumn: DimCustomer.CustomerKey
 
 relationship 28725b79-bf5f-5b86-61f0-e733429d169a
-	fromColumn: DimAccount.AccountKey
-	toColumn: FactAccountsReceivable.AccountKey
+	fromColumn: FactAccountsReceivable.AccountKey
+	toColumn: DimAccount.AccountKey
 
 relationship 187704cf-bf0e-df2e-79db-63e57c04fcce
 	fromColumn: FactAccountsPayable.VendorKey
 	toColumn: DimVendor.VendorKey
 
 relationship 3dffe906-1e9c-b778-e4f3-6d3e9b93847e
-	fromColumn: DimAccount.AccountKey
-	toColumn: FactAccountsPayable.AccountKey
+	fromColumn: FactAccountsPayable.AccountKey
+	toColumn: DimAccount.AccountKey
 

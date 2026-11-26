@@ -239,6 +239,26 @@ table FactAccountsReceivable
 
 		annotation SummarizationSetBy = Automatic
 
+	column InvoiceID
+		dataType: string
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-333333333001
+		sourceLineageTag: InvoiceID
+		summarizeBy: none
+		sourceColumn: InvoiceID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-333333333002
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition FactAccountsReceivable = entity
 		mode: directLake
 		source

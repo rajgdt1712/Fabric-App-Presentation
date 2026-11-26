@@ -124,6 +124,55 @@ table Measure
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure Revenue =
+			
+			CALCULATE(
+			    SUM(FactGeneralLedger[CreditAmount]) - SUM(FactGeneralLedger[DebitAmount]),
+			    DimAccount[AccountType] = "Revenue",
+			    NOT ISBLANK(FactGeneralLedger[DepartmentKey])
+			)
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-111111111001
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Expense' =
+			
+			CALCULATE(
+			    SUM(FactGeneralLedger[DebitAmount]) - SUM(FactGeneralLedger[CreditAmount]),
+			    DimAccount[AccountType] = "Expense",
+			    NOT ISBLANK(FactGeneralLedger[DepartmentKey])
+			)
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-111111111002
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Profit' =
+			
+			[Revenue] - [Total Expense]
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-111111111003
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit Margin %' =
+			
+			DIVIDE([Net Profit], [Revenue], 0)
+		formatString: 0.0%
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-111111111004
+
+	measure 'Total Invoiced' =
+			
+			[AR Invoiced]
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-111111111005
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Bills' =
+			
+			[AP Bills]
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-111111111006
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: a5307728-d5d4-4397-89eb-f0964a2df20b

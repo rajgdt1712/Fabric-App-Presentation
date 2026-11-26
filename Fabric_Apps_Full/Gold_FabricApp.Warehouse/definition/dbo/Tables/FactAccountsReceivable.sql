@@ -22,7 +22,9 @@ CREATE TABLE [dbo].[FactAccountsReceivable] (
     [SourceSystem]      VARCHAR (100)   NULL,
     [SourceRecordID]    VARCHAR (100)   NULL,
     [CreatedDate]       DATETIME2 (6)   NULL,
-    [ModifiedDate]      DATETIME2 (6)   NULL
+    [ModifiedDate]      DATETIME2 (6)   NULL,
+    [InvoiceID]         VARCHAR (100)   NULL,
+    [Amount]            DECIMAL (19, 4) NULL
 );
 
 

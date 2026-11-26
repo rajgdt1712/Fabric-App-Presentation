@@ -23,7 +23,9 @@ CREATE TABLE [dbo].[DimDate] (
     [IsYearStart]         BIT          NULL,
     [IsYearEnd]           BIT          NULL,
     [IsWorkingDay]        BIT          NULL,
-    [IsHoliday]           BIT          NULL
+    [IsHoliday]           BIT          NULL,
+    [Year]                INT          NULL,
+    [MonthNumberOfYear]   INT          NULL
 );
 
 

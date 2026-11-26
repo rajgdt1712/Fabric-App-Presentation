@@ -58,19 +58,19 @@ App Fabric.AppBackend (Static React + Vega-Lite Frontend)
 The `App Fabric` frontend is a Vite/React + Vega-Lite dashboard connected via DirectLake to `Fabric App SM.SemanticModel` (`Gold_FabricApp.Warehouse`):
 
 #### Executive Financials
-* KPIs: Total Revenue (`$14.25M`), Total Expense (`$9.82M`), Net Profit (`$4.43M`), Profit Margin (`31.1%`)
+* KPIs: Total Revenue (`$14.90M`), Total Expense (`$9.93M`), Net Profit (`$4.97M`), Profit Margin (`33.4%`)
 * Charts: Monthly Financial Trajectory & Departmental Allocation (with company entity filter)
 
 ![App Fabric - Executive Financials](docs/images/app-fabric-executive-financials.jpg)
 
 #### Accounts Receivable
-* KPIs: Total Invoiced (`$5.84M`), AR Collected (`$4.21M`), AR Outstanding (`$1.63M`), Active Invoices (`1,420`)
+* KPIs: Total Invoiced (`$6.38M`), AR Collected (`$4.36M`), AR Outstanding (`$2.05M`), Active Invoices (`24`)
 * Charts & Ledger: Aging Receivables Exposure & Receivables Ledger & Invoices
 
 ![App Fabric - Accounts Receivable](docs/images/app-fabric-accounts-receivable.jpg)
 
 #### Accounts Payable
-* KPIs: Total Incurred Bills (`$4.12M`), Disbursed (`$3.28M`), AP Outstanding (`$840.0k`), Active Bills (`840`)
+* KPIs: Total Incurred Bills (`$3.62M`), Disbursed (`$2.60M`), AP Outstanding (`$1.04M`), Active Bills (`19`)
 * Charts & Ledger: Payables Aging Exposure & Vendor Payables & Disbursement Ledger
 
 ![App Fabric - Accounts Payable](docs/images/app-fabric-accounts-payable.jpg)

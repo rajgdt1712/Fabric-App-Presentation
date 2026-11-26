@@ -239,6 +239,36 @@ table FactAccountsPayable
 
 		annotation SummarizationSetBy = Automatic
 
+	column BillID
+		dataType: string
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-444444444001
+		sourceLineageTag: BillID
+		summarizeBy: none
+		sourceColumn: BillID
+
+		annotation SummarizationSetBy = Automatic
+
+	column BillDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-444444444002
+		sourceLineageTag: BillDate
+		summarizeBy: none
+		sourceColumn: BillDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column Amount
+		dataType: double
+		lineageTag: 8a1f3c2e-94b1-4b27-a1e2-444444444003
+		sourceLineageTag: Amount
+		summarizeBy: sum
+		sourceColumn: Amount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition FactAccountsPayable = entity
 		mode: directLake
 		source

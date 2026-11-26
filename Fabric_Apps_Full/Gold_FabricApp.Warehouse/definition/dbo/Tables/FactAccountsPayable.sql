@@ -22,7 +22,10 @@ CREATE TABLE [dbo].[FactAccountsPayable] (
     [SourceSystem]      VARCHAR (100)   NULL,
     [SourceRecordID]    VARCHAR (100)   NULL,
     [CreatedDate]       DATETIME2 (6)   NULL,
-    [ModifiedDate]      DATETIME2 (6)   NULL
+    [ModifiedDate]      DATETIME2 (6)   NULL,
+    [BillID]            VARCHAR (100)   NULL,
+    [BillDate]          DATE            NULL,
+    [Amount]            DECIMAL (19, 4) NULL
 );
 
 
